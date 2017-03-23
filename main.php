@@ -7,6 +7,9 @@ and open the template in the editor.
 <?php
 require_once '.dat/config.php';
 require_once '.dat/funcs.php';
+
+$userName = valid_session();
+if (strlen($userName)<1) 
 ?>
 <html>
   <head>
@@ -15,8 +18,14 @@ require_once '.dat/funcs.php';
     <link href="styles.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
-    <div class="master_container">      
     <?php get_div_header(); ?>
+    <div class="master_container">      
+      <div class="leftnav">
+        <p>Bemvindo, <?php echo $userName; ?>.</p>
+        <div class="responseButton">
+        <a href="logout.php">Sair</a>
+        </div>
+      </div>
       <div class="topnav" id="myTopnav">
         <a href="movements.php">Movements</a>
         <a href="users.php">Users</a>

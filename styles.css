@@ -34,6 +34,31 @@ body {
     font-size: 16pt;
 }
 
+.leftnav {
+  width: 200px;
+  float: left;
+  padding-left: 5px;
+  background-color: lightgrey;
+  font-size: 12pt;
+}
+
+.responseButton a {
+  color: black;
+  float: left;
+  padding: 14px 14px 14px 14px;
+  text-decoration: none;
+}
+
+.responseButton a:hover {
+  background-color: black;
+  color: whitesmoke;
+}
+
+.responseButton a.active {
+  background-color: whitesmoke;
+  color: black;
+}
+
 /* Add a black background color to the top navigation */
 .topnav {
     background-color: #333;

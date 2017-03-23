@@ -34,4 +34,9 @@ function valid_session() {
     return $valid;
   }
 }
+
+function logout() {
+  header("Location: logout.php");
+  die();
+}
 ?>
