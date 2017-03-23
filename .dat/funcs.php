@@ -18,4 +18,20 @@ function get_div_footer() {
     print "2017 - Ricardo Cabral &copy;\n";
     print "</div>\n";
 }
+
+function valid_session() {
+  $valid = "";
+  if (isset($_SESSION["UID"])) {
+    $user_id = filter_var($_SESSION["UID"]);
+    $pdo = new PDO("mysql:host=$db_host;dbname=$db_name", $db_user, $db_password);
+    $query = $pdo->prepare("SELECT name FROM users WHERE id=?");
+    $query->execute([$user_id]);
+    if ($row = $query->fetch()) {
+      $valid=$row['name'];
+    }
+    $pdo=null;
+    $query=null;
+    return $valid;
+  }
+}
 ?>

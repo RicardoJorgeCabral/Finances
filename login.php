@@ -19,7 +19,9 @@ $pdo = new PDO("mysql:host=$db_host;dbname=$db_name", $db_user, $db_password);
 $query = $pdo->prepare("SELECT * FROM users WHERE login=? AND passwd=?");
 $query->execute([$user,$hash]);
 if ($row = $query->fetch()) {
-    header("Location : app.php");
+    header("Location : main.php");
+    session_start();
+    $_SESSION("UID") = $row['id'];
     die();
 }
 else {
