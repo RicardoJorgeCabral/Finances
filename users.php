@@ -24,14 +24,15 @@ if (strlen($userName)<1) {
     <?php get_div_header(); ?>
     <div class="master_container">      
       <?php get_div_left_nav($userName); ?>
-      <div>
-        <?php get_div_menu(); ?>
-        <div class="content">
-          Content goes here...
-      <?php
-      // put your code here
-      ?>
-        </div>
+      <?php get_div_menu(); ?>
+      <div>        
+    <?php
+    // put your code here
+    $userLogin = filter_var($_SESSION["ULOGIN"]);
+    $userID = filter_var($_SESSION["UID"]);
+    print "$userID $userLogin $userName <br />";
+    
+    ?>
       </div>
     <?php get_div_footer(); ?>
     </div>

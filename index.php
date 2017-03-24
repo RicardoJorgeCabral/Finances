@@ -11,7 +11,7 @@ require_once '.dat/funcs.php';
 <html>
     <head>
         <meta charset="UTF-8">
-        <title><?php print $web_title; ?></title>
+        <title><?php print WEB_TITLE; ?></title>
         <link href="styles.css" rel="stylesheet" type="text/css" />
     </head>
     <body>
@@ -22,7 +22,7 @@ require_once '.dat/funcs.php';
         ?>
             <div align="center" style="padding: 100px 30px 100px 30px;">
         <form action="login.php" method="POST">
-            <table border="0">               
+            <table border="0" style="font-size: 16pt">               
                 <tbody>
                     <tr>
                         <td>Login:</td>

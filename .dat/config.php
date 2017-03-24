@@ -5,11 +5,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-$db_user="finances";
-$db_password="finances";
-$db_host="localhost";
-$db_name="finances";
+define ('DB_USER','finances');
+define ('DB_PASSWORD','finances');
+define ('DB_HOST','localhost');
+define ('DB_NAME', 'finances');
 
-$web_title="Financial Manager";
-
+define ('WEB_TITLE', 'Financial Manager');
 ?>
