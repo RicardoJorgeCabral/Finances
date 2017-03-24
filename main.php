@@ -8,6 +8,7 @@ and open the template in the editor.
 require_once '.dat/config.php';
 require_once '.dat/funcs.php';
 
+session_start();
 $userName = valid_session();
 if (strlen($userName)<1) 
 ?>

@@ -6,8 +6,8 @@
  * and open the template in the editor.
  */
 
-require_once '.dat/config.php';
-require_once '.dat/funcs.php';
+require '.dat/config.php';
+require '.dat/funcs.php';
 
 $user = filter_input(INPUT_POST,"txtLogin");
 $passwd = filter_input(INPUT_POST,"txtPasswd");
@@ -22,7 +22,6 @@ if ($row = $query->fetch()) {
     $loc = "Location: main.php";
     session_start();
     $_SESSION["UID"] = $row[0];
-
 }
 else {
     $loc = "Location: index.php?LoginError=1";
