@@ -7,12 +7,6 @@ and open the template in the editor.
 <?php
 require_once '.dat/config.php';
 require_once '.dat/funcs.php';
-
-session_start();
-$userName = valid_session();
-if (strlen($userName)<1) {
-  logout();
-}
 ?>
 <html>
   <head>
@@ -20,20 +14,18 @@ if (strlen($userName)<1) {
     <title><?php print WEB_TITLE; ?></title>
     <link href="styles.css" rel="stylesheet" type="text/css" />
   </head>
-  <body>
-    <?php get_div_header(); ?>
-    <div class="master_container">      
-      <?php get_div_left_nav($userName); ?>
+  <body>    
+    <div class="header1"> HEADER </div>
+    <div class="master_container">     
+      <div class="leftnav"> Painel da esquerda<br /> </div>
       <div class="center_div">
-        <?php get_div_menu(); ?>
+        <?php get_div_menu(); /* topnav */?>
         <div class="content">
-          Content goes here...
-          <?php
-          // put your code here
-          ?>
+          Content goes here...<br />
+          <?php for ($i=0;$i<20;$i++) { print "XXX<br />"; } ?> 
         </div>
-      </div>    
-    </div>
-    <?php get_div_footer(); ?>
+      </div>      
+    </div> 
+    <div class="footer1">RODAPÉ</DIV>
   </body>
 </html>

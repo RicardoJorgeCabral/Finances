@@ -14,12 +14,9 @@ require_once '.dat/funcs.php';
         <title><?php print WEB_TITLE; ?></title>
         <link href="styles.css" rel="stylesheet" type="text/css" />
     </head>
-    <body>
-        <div class="master_container">
+    <body>        
         <?php get_div_header(); ?>
-        <?php
-        // put your code here
-        ?>
+        <div class="master_container">
             <div align="center" style="padding: 100px 30px 100px 30px;">
         <form action="login.php" method="POST">
             <table border="0" style="font-size: 16pt">               
@@ -57,8 +54,8 @@ require_once '.dat/funcs.php';
                 </tbody>
             </table>
         </form>
-            </div>
-            <?php get_div_footer(); ?>
+            </div>            
         </div>
+        <?php get_div_footer(); ?>
     </body>
 </html>
