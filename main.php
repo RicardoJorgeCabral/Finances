@@ -23,9 +23,13 @@ if (strlen($userName)<1) {
   <body>
     <?php get_div_header(); ?>
     <div class="master_container">      
-      <?php get_div_left_nav($userName); ?>
-      <div class="center_div">
+      <!-- SIDEBAR ---------------------------------------------------------------------------->
+      <div class="leftnav">
+        <p>Autenticado como <?php echo $userName; ?>.</p>
         <?php get_div_menu(); ?>
+      </div>
+      <!-- SIDEBAR ---------------------------------------------------------------------------->
+      <div class="center_div">        
         <div class="content">
           Content goes here...
           <?php
